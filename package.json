@@ -1,0 +1,24 @@
+{
+  "name": "udacity_fullstack_project1",
+  "version": "1.0.0",
+  "description": "Server-side code to store a list of favorite movies, including box art imagery and a movie trailer URL This project is part of the Udacity Full Stack Nanodegree",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wittrura/Fullstack_Project1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wittrura/Fullstack_Project1/issues"
+  },
+  "homepage": "https://github.com/wittrura/Fullstack_Project1#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}

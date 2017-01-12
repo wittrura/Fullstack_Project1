@@ -3,11 +3,23 @@
 import media
 import fresh_tomatoes
 
+import requests, json
+
 # instantiation of movie objects
 toy_story = media.Movie("Toy Story",
                         "A story of a boy and his toys that come to life",
                         "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
                         "https://www.youtube.com/watch?v=KYz2wyBy3kc")
+
+r = requests.get('http://localhost:3030/api/movies')
+data = r.json()
+print(data['title'])
+print(data['summary'])
+print(data['poster'])
+print(data['trailer'])
+
+# for value in data:
+#     print(value.content)
 
 avatar = media.Movie("Avatar",
                     "A marine on an alien planet",
