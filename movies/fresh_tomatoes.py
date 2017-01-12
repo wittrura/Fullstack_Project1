@@ -150,25 +150,15 @@ def create_movie_tiles_content(movies):
 
 
 def open_movies_page(movies):
-    # Create or overwrite the output file
-    #output_file = open('fresh_tomatoes.html', 'w')
-
     # Replace the movie tiles placeholder generated content
     rendered_content = main_page_content.format(
         movie_tiles=create_movie_tiles_content(movies))
 
-    # Output the file
-    #output_file.write(main_page_head + rendered_content)
-    #output_file.close()
-
-    #to create index.html file up a level
+    # Output the file as index to root directory, for serving via webserver
     output_index = open(os.path.join(os.pardir, "index.html"), "w")
     output_index.write(main_page_head + rendered_content)
     output_index.close()
-    #
 
     # open the output file in the browser (in a new tab, if possible)
-    #url = os.path.abspath(output_file.name)
-    #webbrowser.open('file://' + url, new=2)
     url = os.path.abspath(output_index.name)
     webbrowser.open('file://' + url, new=2)

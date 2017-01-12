@@ -1,4 +1,11 @@
-#
+# Defines movie class for instantiation of movie objects
+
+# inputs
+# movie title, string
+# short summary, string
+# movie poster image, string of url
+# video trailer, string of url
+
 import webbrowser
 
 class Movie():

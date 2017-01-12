@@ -1,7 +1,9 @@
-#
+# creates movie objects for displaying on webpage
+# import Movie class and functionality for displaying movies in html
 import media
 import fresh_tomatoes
 
+# instantiation of movie objects
 toy_story = media.Movie("Toy Story",
                         "A story of a boy and his toys that come to life",
                         "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
@@ -34,4 +36,5 @@ in_bruges = media.Movie("In Bruges",
 
 movies = [toy_story, avatar, reservoir_dogs, snatch, mallrats, in_bruges]
 
+# display list of movies on webpage
 fresh_tomatoes.open_movies_page(movies)
