@@ -4,15 +4,18 @@ This project is part of the Udacity Full Stack Nanodegree
 
 # Install
 Clone the GitHub repository
-    git clone https://github.com/wittrura/Fullstack_Project1.git
-    cd Udacity_FullStack_Project1
+```
+git clone https://github.com/wittrura/Fullstack_Project1.git
+cd Udacity_FullStack_Project1
+```
 
 
 # Run
 Navigate to movies folder and run entertain_center.py
-    cd movies
-    python entertainment_center.py
-
+```
+cd movies
+python entertainment_center.py
+```
 
 # Extension
 New movies can be added in "media.py"
