@@ -5,47 +5,25 @@ import fresh_tomatoes
 
 import requests, json
 
-# instantiation of movie objects
-toy_story = media.Movie("Toy Story",
-                        "A story of a boy and his toys that come to life",
-                        "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
-                        "https://www.youtube.com/watch?v=KYz2wyBy3kc")
-
+# request movie data from api
+# type: json
 r = requests.get('http://localhost:3030/api/movies')
 data = r.json()
-print(data['title'])
-print(data['summary'])
-print(data['poster'])
-print(data['trailer'])
 
-# for value in data:
-#     print(value.content)
+# instantiation of movie objects using payload from API
+toy_story = media.Movie(data['title1'], data['summary1'], data['poster1'], data['trailer1'])
 
-avatar = media.Movie("Avatar",
-                    "A marine on an alien planet",
-                    "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg",
-                    "https://www.youtube.com/watch?v=5PSNL1qE6VY")
+avatar = media.Movie(data['title2'], data['summary2'], data['poster2'], data['trailer2'])
 
-reservoir_dogs = media.Movie("Reservoir Dogs",
-                            "A heist gone wrong",
-                            "https://upload.wikimedia.org/wikipedia/en/f/f6/Reservoir_dogs_ver1.jpg",
-                            "https://www.youtube.com/watch?v=vayksn4Y93A")
+reservoir_dogs = media.Movie(data['title3'], data['summary3'], data['poster3'], data['trailer3'])
 
-snatch = media.Movie("Snatch",
-                    "Two sides of the London unground collide",
-                    "https://upload.wikimedia.org/wikipedia/en/a/a7/Snatch_ver4.jpg",
-                    "https://www.youtube.com/watch?v=Q8jbt0wBkMI")
+snatch = media.Movie(data['title4'], data['summary4'], data['poster4'], data['trailer4'])
 
-mallrats = media.Movie("Mallrats",
-                        "Just another day at the mall",
-                        "https://upload.wikimedia.org/wikipedia/en/9/96/Mallrats.jpg",
-                        "https://www.youtube.com/watch?v=_eVo7aBze1w")
+mallrats = media.Movie(data['title5'], data['summary5'], data['poster5'], data['trailer5'])
 
-in_bruges = media.Movie("In Bruges",
-                        "Two hit men hide out in a small town in Belgium",
-                        "https://upload.wikimedia.org/wikipedia/en/6/63/In_Bruges_Poster.jpg",
-                        "https://www.youtube.com/watch?v=KoE9edjEDCI")
+in_bruges = media.Movie(data['title6'], data['summary6'], data['poster6'], data['trailer6'])
 
+# create list of all movies
 movies = [toy_story, avatar, reservoir_dogs, snatch, mallrats, in_bruges]
 
 # display list of movies on webpage

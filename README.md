@@ -11,14 +11,20 @@ cd Udacity_FullStack_Project1
 
 
 # Run
-Navigate to movies folder and run entertain_center.py
+Start the node server - default port is 3030
+```
+npm start
+```
+
+Navigate to movies folder and run entertainment_center.py - this will create the index.html file
 ```
 cd movies
 python entertainment_center.py
 ```
 
 # Extension
-New movies can be added in "media.py"
+Data is served via API from static JSON object in api.js
+Movies and fields can be updated there - be sure to run entertainment_center.py after any updates to create a new index.html file
 
 # License
 The content of this repository is licensed under a Creative Commons Attribution License
