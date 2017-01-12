@@ -8,6 +8,10 @@ git clone https://github.com/wittrura/Fullstack_Project1.git
 cd Udacity_FullStack_Project1
 ```
 
+Install node dependencies
+```
+npm install
+```
 
 # Run
 Start the node server - default port is 3030
